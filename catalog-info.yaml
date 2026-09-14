@@ -34,13 +34,12 @@ spec:
   providesApis:
     - api-cep
   dependsOn:
-    - resource:default/api-cep
-    - resource:default/internet
+    - resource:default/viacep-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: api-api
+  name: viacep-api
   description: External API to Brazilian CEP Consults
   tags:
     - external
