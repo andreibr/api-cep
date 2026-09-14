@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: ViaCEP API
+  description: API for accessing Brazilian postal code (CEP) information.
+  version: 1.0.0
+  contact:
+    name: ViaCEP
+    url: https://viacep.com.br/
+
+servers:
+  - url: https://viacep.com.br/ws
+
+paths:
+  /{cep}/json:
+    get:
+      summary: Get address information by CEP
+      description: Returns address details for a given Brazilian postal code (CEP).
+      parameters:
+        - name: cep
+          in: path
+          required: true
+          description: Brazilian postal code (CEP) without hyphen.
+          schema:
+            type: string
+            example: "01001000"
+      responses:
+        '200':
+          description: Successful response with address information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cep:
+                    type: string
+                    example: "01001-000"
+                  logradouro:
+                    type: string
+                    example: "Praça da Sé"
+                  complemento:
+                    type: string
+                    example: "lado ímpar"
+                  bairro:
+                    type: string
+                    example: "Sé"
+                  localidade:
+                    type: string
+                    example: "São Paulo"
+                  uf:
+                    type: string
+                    example: "SP"
+                  ibge:
+                    type: string
+                    example: "3550308"
+                  gia:
+                    type: string
+                    example: "1004"
+                  ddd:
+                    type: string
+                    example: "11"
+                  siafi:
+                    type: string
+                    example: "7107"
+        '400':
+          description: Invalid CEP format
+        '404':
+          description: CEP not found

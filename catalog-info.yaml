@@ -57,4 +57,21 @@ spec:
   owner: group:default/cep-api
   dependencyOf:
     - component:default/api-cep
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-cep
+  description: External API to Brazilian CEP Consults
+  tags:
+    - rest
+    - openapi
+    - cep
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: group:default/cep-api
+  system: api-cep
+  definition:
+    Stext: ./openapi.yaml
 
