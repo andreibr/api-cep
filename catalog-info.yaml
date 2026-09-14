@@ -33,6 +33,8 @@ spec:
   owner: group:default/cep-api
   providesApis:
     - api-cep
+  dependsOn:
+    - resource:default/viacep-api
 ---
 apiVersino: backstage.io/v1alpha1
 kind: Resource
