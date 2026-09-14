@@ -28,6 +28,6 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: group:default/team-cep
+  owner: group:default/cep-api
   providesApis:
     - api-cep
