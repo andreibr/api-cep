@@ -63,6 +63,9 @@ kind: API
 metadata:
   name: api-cep
   description: External API to Brazilian CEP Consults
+  annotations:
+    github.com/project-slug: andreibr/api-cep
+    backstage.io/techdocs-ref: dir:.
   tags:
     - rest
     - openapi
