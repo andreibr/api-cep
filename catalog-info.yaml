@@ -13,10 +13,10 @@ metadata:
     - experimental
 
   annotations:
-    github.com/project-slug: iesodias/api-cep
+    github.com/project-slug: andreibr/api-cep
 
   links:
-    - url: https://github.com/iesodias/api-cep
+    - url: https://github.com/andreibr/api-cep
       title: Repositório (GitHub)
       icon: github
     - url: http://localhost:3000/api-docs
