@@ -11,10 +11,8 @@ metadata:
     - docker
     - backend
     - experimental
-
   annotations:
     github.com/project-slug: andreibr/api-cep
-
   links:
     - url: https://github.com/andreibr/api-cep
       title: Repositório (GitHub)
@@ -25,9 +23,36 @@ metadata:
     - url: http://localhost:8000/docs
       title: Swagger UI (FastAPI)
       icon: docs
+    - url: http://viacep.com.br
+      title: ViaCEP (External Service)
+      icon: web
+      type: external-dependenty
 spec:
   type: service
   lifecycle: experimental
   owner: group:default/cep-api
   providesApis:
     - api-cep
+---
+apiVersino: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: viacep-api
+  description: External API to Brazilian CEP Consults
+  tags:
+    - external
+    - api
+    - third-party
+  links:
+    - url: https://viacep.com.br
+      title: ViaCEP Website
+      icon: web
+    - url: https://viacep.com.br/ws/01001000/json/
+      title: Query Sample
+      icon: docs
+spec:
+  type: external-api
+  owner: group:default/cep-api
+  dependencyOf:
+    - component:default/api-cep
+
