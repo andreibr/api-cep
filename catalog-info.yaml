@@ -35,6 +35,7 @@ spec:
     - api-cep
   dependsOn:
     - resource:default/viacep-api
+    - resource:default/internet
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
