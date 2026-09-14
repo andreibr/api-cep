@@ -74,5 +74,5 @@ spec:
   owner: group:default/cep-api
   system: api-cep
   definition:
-    Stext: ./openapi.yaml
+    $text: ./openapi.yaml
 
